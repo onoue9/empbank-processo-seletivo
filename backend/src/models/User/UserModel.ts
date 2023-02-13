@@ -10,11 +10,10 @@ export default class UserModel {
     return allUsers;
   }
 
-  async getUserById(user: UserInterface): Promise<UserInterface | null> {
-    const { email } = user;
+  async getUserById(userId: number): Promise<UserInterface | null> {
     const getUser = await prisma.user.findUnique({
       where: {
-        email: email,
+        id: userId,
       }
     });
     return getUser;
