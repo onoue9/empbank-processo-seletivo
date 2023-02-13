@@ -5,6 +5,13 @@ const prisma = new PrismaClient();
 
 export default class TransationModel {
 
+  async getAllTransactionsByUserId(userId: number): Promise<TransactionInterface[]> {
+    const transactions = await prisma.transaction.findMany({
+      where: { userId: { in: userId } }
+    });
+    return transactions;
+  }
+
   async createTransaction(transaction: TransactionInterface): Promise<TransactionInterface> {
     const newTransaction = await prisma.transaction.create({ 
       data: {

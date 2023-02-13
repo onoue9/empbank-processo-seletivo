@@ -9,6 +9,11 @@ export default class TransactionService {
     this.TransactionModel = new TransactionModel();
   }
 
+  async getAllTransactionsByUserId(userId: number): Promise<TransactionInterface[]> {
+    const transactions = await this.TransactionModel.getAllTransactionsByUserId(userId);
+    return transactions;
+  }
+
   async createTransaction(transaction: TransactionInterface): Promise<TransactionInterface> {
 
     const { userId, title, value, type, category } = transaction;

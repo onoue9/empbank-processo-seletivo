@@ -3,4 +3,6 @@ import { transactionController } from './index';
 
 export const transactionRoutes = express.Router();
 
-transactionRoutes.post('/create', (req, res) => transactionController.createTransaction(req, res));
+transactionRoutes
+  .get('/:userId', (req, res) => transactionController.getAllTransactionsByUserId(req, res))
+  .post('/createTransaction', (req, res) => transactionController.createTransaction(req, res));
