@@ -1,7 +1,5 @@
 import UserService from './UserService';
-import UserInterface from './UserInterface';
 import { Request, Response } from 'express';
-import { request } from 'http';
 
 export default class UserController {
 
@@ -16,14 +14,14 @@ export default class UserController {
       const allUsers = await this.UserService.getAllUsers();
       return res.status(200).json(allUsers);
     } catch (error) {
-      return res.status(400).json({ error });
+      return res.status(404).json(error);
     }
   }
 
   async getUser(req: Request, res: Response): Promise<Response> {
-    const { email } = req.body;
+    const { userId } = req.params;
     try {
-      const user = await this.UserService.getUser(email);
+      const user = await this.UserService.getUser(parseFloat(userId));
       return res.status(200).json(user);
     } catch (error) {
       return res.status(400).json({ error });
@@ -46,7 +44,7 @@ export default class UserController {
       const newUser = await this.UserService.registerUser({ fullName, email, password });
       return res.status(200).json(newUser);
     } catch (error) {
-      return res.status(400).json({ error });
+      return res.status(400).json(error);
     }
   }
 }
