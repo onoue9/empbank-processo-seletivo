@@ -5,4 +5,4 @@ import { transactionRoutes } from '../models/Transaction/trensactionRoutes';
 export const routes = express.Router();
 
 routes.use(userRoutes);
-routes.use(transactionRoutes);
+routes.use('/transaction', transactionRoutes);
