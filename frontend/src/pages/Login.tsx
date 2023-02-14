@@ -1,4 +1,4 @@
-import { AspectRatio, Box, Button, Center, Flex, Image, Text, TextInput, Title } from '@mantine/core';
+import { Button, Flex, Image, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import LoginPageImage from '../assets/images/LoginPageImage.svg';
 import empbankLogo from '../assets/images/empbankLogo.svg';
@@ -15,6 +15,7 @@ export default function Login() {
       password: (value: string) => value.length >= 6 ? null : 'Invalid password',
     },
   })
+  
   return (
       <Flex
         align="flex-start"
@@ -37,35 +38,36 @@ export default function Login() {
           <Image
             src={empbankLogo}
             alt="Logo da empbank"
-            style={{ width: '100%', height: '98px' }}
+            style={{ width: '100%' }}
           />
           <Title
-            style={{ width: '100%', height: '46px' }}
+            style={{ width: '100%', height: '46px', fontWeight: '700', fontSize: '32px', lineHeight: '135%' }}
             align="left"
             order={2}
-            weight="bold"
           >Faça seu login</Title>
           <form 
             onSubmit={form.onSubmit((values) => console.log(values))}
-            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}
+            style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', height: '212px' }}
           >
             <TextInput
               label="Email"
-              placeholder="Enter your email"
+              placeholder="Insira seu email"
               {...form.getInputProps('email')}
               style={{ width: '100%', height: '100px' }}
               radius="md"
             />
             <TextInput
               label="Password"
-              placeholder="Enter your password"
+              placeholder="Insira sua senha"
               {...form.getInputProps('password')}
               type="password"
               style={{ width: '100%', height: '100px' }}
               radius="md"
             />
             <Button style={{ backgroundColor: '#60CFFA' }} fullWidth radius="md" size="lg" type="submit">
-              <Text size="lg">Fazer Login</Text>
+              <Text
+                style={{ fontWeight: '600', fontSize: '20px', lineHeight: '155%', color: '#F2F2F2' }}
+              >FAZER LOGIN</Text>
             </Button>
           </form>
           <Button
@@ -74,7 +76,9 @@ export default function Login() {
             radius="md"
             size='lg'
           >
-            <Text size="lg">Criar Conta</Text>
+            <Text
+              style={{ fontWeight: '600', fontSize: '20px', lineHeight: '155%', color: '#F2F2F2' }}
+            >CRIAR CONTA</Text>
           </Button>
         </Flex>
       </Flex>
