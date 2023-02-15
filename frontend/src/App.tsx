@@ -3,7 +3,7 @@ import AppRoutes from './routes';
 
 export default function App() {
   return (
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <MantineProvider withCSSVariables withGlobalStyles withNormalizeCSS>
       <AppRoutes />
     </MantineProvider>
   );
