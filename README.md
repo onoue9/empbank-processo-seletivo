@@ -1,24 +1,21 @@
 
-# Cashforce Tech Challenge
+# Empbank Tech Challenge
 
-Projeto desenvolvido para realizar o teste prático da Cashforce para vaga de Fullstack Node/Vue.js Developer - Júnior [Remoto, Brasil].
+Projeto desenvolvido para realizar o Processo Seletivo Empbank - Desenvolvedor Full Stack.
 
-Onde nele criei uma API em Node utilizando express e sequelize, conectando-se a um [banco de dados](https://gist.githubusercontent.com/Allan96/a3538e88600559587155a01b0330124e/raw/c7ad85e464dca320fbf54b5e84fb1dd79a888511/teste.sql).
-
-Depois a criação da API, construí uma tela baseando-se no [Figma](https://www.figma.com/file/NY1fe6PAZ6DKeD9eOzyrju/Teste-Cashfroce?node-id=0%3A1) disponibilizado, utilizando Vue.JS como framework, consultando a API que criei e exibindo os dados retornados por ela.
-
+Onde foi proposto desenvolver uma página de controle financeiro pessoal que permite aos usuários controlar suas finanças de maneira fácil e intuitiva.
 
 ## Documentação da API
 
-#### Retorna todos os orders
+#### User
 
 ```http
-  GET /orders
+  GET /
 ```
 
-| Descrição                           |
-| :---------------------------------- |
-| Retorna todos os orders |
+| Descrição                           | Descrição                           |
+| :---------------------------------- | :---------------------------------- |
+| Retorna todos os usuários | Retorna todos os usuários |
 
 
 ## Demonstração
