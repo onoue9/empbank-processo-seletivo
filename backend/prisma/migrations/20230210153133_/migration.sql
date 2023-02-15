@@ -12,7 +12,7 @@ CREATE TABLE "User" (
 CREATE TABLE "Transaction" (
     "id" SERIAL NOT NULL,
     "title" TEXT NOT NULL,
-    "value" INTEGER NOT NULL,
+    "value" FLOAT NOT NULL,
     "category" TEXT NOT NULL,
     "type" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
