@@ -1,5 +1,6 @@
 import TransactionModel from './TransactionModel';
 import TransactionInterface from './TransactionInterface';
+import CustomError from '../../utils/CustomError';
 
 export default class TransactionService {
 
@@ -19,13 +20,13 @@ export default class TransactionService {
     const { userId, title, value, type, category } = transaction;
 
     if (!userId || !title || !value || !type || !category) {
-      throw new Error("Invalid transaction");
+      throw new CustomError(400, "Transação inválida");
     }
 
-    const createTransaction = await this.TransactionModel.createTransaction(transaction);
+    const createTransaction = await this.TransactionModel.createTransaction({ userId, title, value, type, category });
 
     if (!createTransaction) {
-      throw new Error("Transaction not created");
+      throw new CustomError(400, "Transação não criada");
     }
 
     return createTransaction;
