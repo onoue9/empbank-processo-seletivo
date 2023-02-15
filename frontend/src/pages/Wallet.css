@@ -1,0 +1,19 @@
+@media (max-width: 600px) {
+  .tr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    width: 90% !important;
+    padding-left: 10px;
+  }
+
+  .td {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100% !important;
+    height: 100%;
+    padding: 0px !important;
+  }
+}
