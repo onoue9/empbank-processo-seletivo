@@ -42,7 +42,7 @@ export default class UserController {
     const { fullName, email, password } = req.body;
     try {
       const newUser = await this.UserService.registerUser({ fullName, email, password });
-      return res.status(200).json(newUser);
+      return res.status(201).json(newUser);
     } catch (error) {
       return res.status(400).json(error);
     }
