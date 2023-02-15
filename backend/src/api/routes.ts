@@ -1,6 +1,6 @@
 import express from 'express';
 import { userRoutes } from '../models/User/userRoutes';
-import { transactionRoutes } from '../models/Transaction/trensactionRoutes';
+import { transactionRoutes } from '../models/Transaction/transactionRoutes';
 
 export const routes = express.Router();
 

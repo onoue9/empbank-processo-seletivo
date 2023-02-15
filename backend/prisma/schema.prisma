@@ -21,7 +21,7 @@ model User {
 model Transaction {
   id        Int      @id @default(autoincrement())
   title     String
-  value     Int
+  value     Decimal
   category  String
   type      String
   createdAt DateTime @default(now())
