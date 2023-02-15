@@ -1,5 +1,6 @@
 import UserModel from "./UserModel";
 import UserInterface from "./UserInterface";
+import CustomError from "../../utils/CustomError";
 
 export default class UserService {
 
@@ -33,25 +34,21 @@ export default class UserService {
     const foundUser = await this.UserModel.loginUser(user);
 
     if (!foundUser) {
-      throw new Error("User not found");
+      throw new CustomError(404, 'Usuário não encontrado');
     }
 
     return foundUser;
   }
   
-  async registerUser(user: UserInterface) {
-    const emailRegex = /\S+@\S+\.\S+/;
-    const { email } = user;
+  async registerUser(user: UserInterface) {    
+    const validateUser = await this.UserModel.getAllUsers();
     
-    if (!emailRegex.test(email)) {
-      throw new Error("Invalid email");
+    if (validateUser.some((validUser) => user.email === validUser.email)) {
+      throw new CustomError(400, 'Já existe um usuário com esse email');
     }
-    
+
     const createUser = await this.UserModel.createUser(user);
     
-    if (!createUser) {
-      throw new Error("User not created");
-    }
     return createUser;
   }
 }
