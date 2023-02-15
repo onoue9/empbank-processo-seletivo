@@ -1,7 +1,7 @@
 export default interface TransactionInterface {
   id: number,
   title: string,
-  value: number,
+  value: string,
   category: string,
   type: string,
   createdAt: string,
