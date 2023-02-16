@@ -66,7 +66,9 @@ Backend:
 ```
 
 Nesse projeto foi utilizado o bando de dados PostgresSQL juntamente do ORM Prisma.
+
 Então você precisará ter instalado na sua máquina o bando de dados PostgresSQL.
+
 O prisma será instalado juntamente das outras dependências.
     
 ## Variáveis de Ambiente
