@@ -75,7 +75,7 @@ O prisma será instalado juntamente das outras dependências.
 
 Esse .env deverá ser criado no diretório do backend.
 
-Temos duas variáveis de ambiente no arquivo .env são elas:
+Temos duas variáveis de ambiente no arquivo .env, que são elas:
 
 `DATABASE_URL` `API_PORT`
 
