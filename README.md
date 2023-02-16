@@ -49,7 +49,7 @@ Passo a passo para instalação e configuração do projeto.
 - PostgreSQL instalado e configurado
 - (opcional) Prisma CLI instalado globalmente
 
-1. Faça o clone do repositório
+## 1. Faça o clone do repositório
 
 SSH:
 ```bash
@@ -60,7 +60,7 @@ HTTPS:
   git clone https://github.com/onoue9/empbank-tech-challenge.git
 ```
 
-2. Instale as dependências
+## 2. Instale as dependências
 
 Você precisará entrar em cada diretório, tanto do frontend como do backend para instalar as dependências
 
