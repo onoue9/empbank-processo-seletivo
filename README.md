@@ -17,14 +17,26 @@ Onde foi proposto desenvolver uma página de controle financeiro pessoal que per
 
 | GET /transaction/:userId | POST /transaction/createTransaction |
 | :---------------------------------- | :---------------------------------- |
-| Retorna todas as trensações do usuário do Id especificado | Cria uma nova transação |
+| Retorna todas as transações do usuário do Id especificado | Cria uma nova transação |
 
 
 ## Demonstração
 
-Tela proposta
+Tela de Login
 
-![alt text](https://cdn.discordapp.com/attachments/851591758211055627/1060218940904710214/image.png)
+![alt text](https://cdn.discordapp.com/attachments/851591758211055627/1075569005726797934/image.png)
+
+Tela de Cadastro
+
+![alt text](https://cdn.discordapp.com/attachments/851591758211055627/1075569168356753479/image.png)
+
+Tela Wallet
+
+![alt text](https://cdn.discordapp.com/attachments/851591758211055627/1075569375328870400/image.png)
+
+Modal Nova Transação
+
+![alt text](https://cdn.discordapp.com/attachments/851591758211055627/1075569470975787108/image.png)
 
 
 ## Instalação
