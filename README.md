@@ -41,7 +41,15 @@ Modal Nova Transação
 
 ## Instalação
 
-Faça o clone do repositório
+Passo a passo para instalação e configuração do projeto.
+
+** Pré-requisitos
+
+- Node.js e NPM/Yarn instalados
+- PostgreSQL instalado e configurado
+- (opcional) Prisma CLI instalado globalmente
+
+1. Faça o clone do repositório
 
 SSH:
 ```bash
@@ -52,7 +60,9 @@ HTTPS:
   git clone https://github.com/onoue9/empbank-tech-challenge.git
 ```
 
-Após o clone, você precisará entrar em cada diretório, tanto do frontend como do backend para instalar as dependências
+2. Instale as dependências
+
+Você precisará entrar em cada diretório, tanto do frontend como do backend para instalar as dependências
 
 Frontend:
 ```bash
@@ -65,13 +75,7 @@ Backend:
   npm install
 ```
 
-Nesse projeto foi utilizado o bando de dados PostgresSQL juntamente do ORM Prisma.
-
-Então você precisará ter instalado na sua máquina o bando de dados PostgresSQL.
-
-O prisma será instalado juntamente das outras dependências.
-    
-## Variáveis de Ambiente
+3. Crie um arquivo .env
 
 Esse .env deverá ser criado no diretório do backend.
 
@@ -87,7 +91,13 @@ DATABASE_URL="postgresql://{usuário}:{senha}@localhost:5432/empbank"
 
 Onde você irá substituir {usuário} pelo seu usuário e {senha} pela sua senha.
 
-## Rodando localmente
+4. Execute as migrações do Prisma
+
+```bash
+npx prisma migrate dev
+```
+
+5. Inicie o servidor
 
 Após ter feito a instalação das dependências e adicionados as variáveis de ambiente, agora você deverá rodar o servidor do backend para fornecer os dados pela API e o de frontend para poder visualizar a página.
 
