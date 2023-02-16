@@ -7,11 +7,7 @@ Onde foi proposto desenvolver uma página de controle financeiro pessoal que per
 
 ## Documentação da API
 
-#### User
-
-```http
-  GET /
-```
+#### Rota User
 
 | GET /                           | GET /:userId                           | POST /login | POST /register |
 | :---------------------------------- | :---------------------------------- | :---------------------------------- | :---------------------------------- | 
