@@ -72,11 +72,13 @@ O prisma será instalado juntamente das outras dependências.
 ## Variáveis de Ambiente
 
 Esse .env deverá ser criado no diretório do backend.
+
 Temos duas variáveis de ambiente no arquivo .env são elas:
 
 `DATABASE_URL` `API_PORT`
 
 API_PORT é usada para especificar a porta que será usada pelo servidor.
+
 E a DATABASE_URL é usada pelo prisma para fazer a integração com o bando de dados, nela são passados os dados de acesso ao seu bando de dados (usuário e senha) como no exemplo:
 
 DATABASE_URL="postgresql://{usuário}:{senha}@localhost:5432/empbank"
@@ -100,11 +102,14 @@ Depois entre no diretório do frontend e rode o servidor
 
 ```bash
   cd frontend
-  npm run serve
+  npm start
 ```
+
 ## Stacks utilizadas
 
-**Front-end:** Vue.js
+**Front-end:** React.js, Typescript e Mantine.
 
-**Back-end:** Node, Express, Sequelize
+**Back-end:** NodeJs, Typescript, Express e Prisma.
+
+**Bando de dados:** PostgresSQL
 
