@@ -81,7 +81,7 @@ Temos duas variáveis de ambiente no arquivo .env, que são elas:
 
 API_PORT é usada para especificar a porta que será usada pelo servidor.
 
-E a DATABASE_URL é usada pelo prisma para fazer a integração com o bando de dados, nela são passados os dados de acesso ao seu bando de dados (usuário e senha) como no exemplo:
+E a DATABASE_URL é usada pelo prisma para fazer a integração com o bando de dados, nela são passados os dados de acesso ao seu banco de dados (usuário e senha) como no exemplo:
 
 DATABASE_URL="postgresql://{usuário}:{senha}@localhost:5432/empbank"
 
