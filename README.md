@@ -75,7 +75,7 @@ Backend:
   npm install
 ```
 
-###3. Crie um arquivo .env
+### 3. Crie um arquivo .env
 
 Esse .env deverá ser criado no diretório do backend.
 
@@ -91,13 +91,13 @@ DATABASE_URL="postgresql://{usuário}:{senha}@localhost:5432/empbank"
 
 Onde você irá substituir {usuário} pelo seu usuário e {senha} pela sua senha.
 
-###4. Execute as migrações do Prisma
+### 4. Execute as migrações do Prisma
 
 ```bash
 npx prisma migrate dev
 ```
 
-###5. Inicie o servidor
+### 5. Inicie o servidor
 
 Após ter feito a instalação das dependências e adicionados as variáveis de ambiente, agora você deverá rodar o servidor do backend para fornecer os dados pela API e o de frontend para poder visualizar a página.
 
