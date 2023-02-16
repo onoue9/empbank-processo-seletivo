@@ -45,11 +45,11 @@ Faça o clone do repositório
 
 SSH:
 ```bash
-  git clone git@github.com:onoue9/cashforce-tech-challenge.git
+  git clone git@github.com:onoue9/empbank-tech-challenge.git
 ```
 HTTPS:
 ```bash
-  git clone https://github.com/onoue9/cashforce-tech-challenge.git
+  git clone https://github.com/onoue9/empbank-tech-challenge.git
 ```
 
 Após o clone, você precisará entrar em cada diretório, tanto do frontend como do backend para instalar as dependências
@@ -64,13 +64,24 @@ Backend:
   cd backend
   npm install
 ```
+
+Nesse projeto foi utilizado o bando de dados PostgresSQL juntamente do ORM Prisma.
+Então você precisará ter instalado na sua máquina o bando de dados PostgresSQL.
+O prisma será instalado juntamente das outras dependências.
     
 ## Variáveis de Ambiente
 
-Para rodar esse projeto, você vai precisar adicionar as seguintes variáveis de ambiente no seu .env
+Esse .env deverá ser criado no diretório do backend.
+Temos duas variáveis de ambiente no arquivo .env são elas:
 
-`DB_HOST` `DB_PORT` `DB_USER` `DB_PASS` `DB_NAME` `API_PORT`
+`DATABASE_URL` `API_PORT`
 
+API_PORT é usada para especificar a porta que será usada pelo servidor.
+E a DATABASE_URL é usada pelo prisma para fazer a integração com o bando de dados, nela são passados os dados de acesso ao seu bando de dados (usuário e senha) como no exemplo:
+
+DATABASE_URL="postgresql://{usuário}:{senha}@localhost:5432/empbank"
+
+Onde você irá substituir {usuário} pelo seu usuário e {senha} pela sua senha.
 
 ## Rodando localmente
 
