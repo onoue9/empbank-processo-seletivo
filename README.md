@@ -43,7 +43,7 @@ Modal Nova Transação
 
 Passo a passo para instalação e configuração do projeto.
 
-** Pré-requisitos
+## Pré-requisitos
 
 - Node.js e NPM/Yarn instalados
 - PostgreSQL instalado e configurado
