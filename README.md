@@ -13,9 +13,9 @@ Onde foi proposto desenvolver uma página de controle financeiro pessoal que per
   GET /
 ```
 
-| Descrição                           | Descrição                           |
-| :---------------------------------- | :---------------------------------- |
-| Retorna todos os usuários | Retorna todos os usuários |
+| GET /                           | GET /:userId                           | POST /login | POST /register |
+| :---------------------------------- | :---------------------------------- | :---------------------------------- | :---------------------------------- | 
+| Retorna todos os usuários | Retorna o usuário pelo Id | Faz o login do usuário | Faz o cadastro do um usuário |
 
 
 ## Demonstração
