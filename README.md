@@ -11,7 +11,13 @@ Onde foi proposto desenvolver uma página de controle financeiro pessoal que per
 
 | GET /                           | GET /:userId                           | POST /login | POST /register |
 | :---------------------------------- | :---------------------------------- | :---------------------------------- | :---------------------------------- | 
-| Retorna todos os usuários | Retorna o usuário pelo Id | Faz o login do usuário | Faz o cadastro do um usuário |
+| Retorna todos os usuários | Retorna o usuário pelo Id | Faz o login do usuário | Faz o cadastro do usuário |
+
+#### Rota Transaction
+
+| GET /transaction/:userId | POST /transaction/createTransaction |
+| :---------------------------------- | :---------------------------------- |
+| Retorna todas as trensações do usuário do Id especificado | Cria uma nova transação |
 
 
 ## Demonstração
